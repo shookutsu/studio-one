@@ -506,16 +506,52 @@
     .hero-left { padding: 60px 24px 48px; }
     .hero-right { min-height: 300px; }
     .hero-stat { display: none; }
+    .hero-title { font-size: 32px !important; white-space: nowrap; }
+    .cta-band .section-title { font-size: 22px !important; white-space: nowrap; }
+    footer { flex-direction: column; gap: 8px; text-align: center; font-size: 11px; }
+    footer > div { flex-direction: row !important; align-items: center; gap: 8px; flex-wrap: nowrap; }
+    footer > div > span { white-space: nowrap; font-size: 11px; }
 
     /* PLANS */
     .why-grid, .plans-grid { grid-template-columns: 1fr; }
 
-    /* 単価バナー：はみ出し防止 */
-    .price-type-grid { grid-template-columns: 1fr !important; }
+    /* 単価バナー：横並びのままサイズ調整・左右余白均等 */
+    .price-type-grid {
+      grid-template-columns: 1fr 1fr !important;
+      margin: 0 !important;
+      width: 100% !important;
+    }
+    .price-type-grid > div {
+      padding: 20px 12px !important;
+    }
+    .price-type-grid p[style*="font-size:48px"] {
+      font-size: 28px !important;
+    }
+    .price-type-grid p[style*="font-size:15px"] {
+      font-size: 11px !important;
+    }
+    .price-type-grid p[style*="font-size:12px"] {
+      font-size: 11px !important;
+    }
+
+    /* 最小受注バー：単価バナーと同幅・左右余白統一 */
     .price-meta-bar {
-      flex-direction: column !important;
+      margin: 0 !important;
+      width: 100% !important;
+      padding: 14px 12px !important;
       gap: 12px !important;
-      padding: 20px !important;
+      flex-wrap: wrap !important;
+    }
+
+    /* 依頼から納品まで：左右均等 */
+    .flow-step {
+      grid-template-columns: 48px 1fr !important;
+      gap: 16px !important;
+      padding: 32px 0 !important;
+    }
+    .flow-step-num {
+      font-size: 36px !important;
+      text-align: right !important;
     }
 
     /* WORKS */
@@ -615,7 +651,7 @@
       <div class="why-card">
         <div class="why-card-num">01</div>
         <p class="why-card-title">自然光×ライティングの融合</p>
-        <p class="why-card-body">自然光とスタジオライティングを組み合わせた撮影で、商品の質感・色味を忠実に、かつ美しく再現します。</p>
+        <p class="why-card-body">緻密なライティングで商品「らしさ」を引き出します。WEBサイトやSNS広告で、一瞬でユーザーの手を止める圧倒的なアイキャッチ力を作ります。</p>
       </div>
       <div class="why-card">
         <div class="why-card-num">02</div>
@@ -993,7 +1029,7 @@
 <section class="cta-band" id="contact">
   <p class="section-eyebrow">Contact</p>
   <h2 class="section-title">まずは無料でご相談ください</h2>
-  <p>どんな小さなご質問でも歓迎です。<br>商品の種類・点数・ご予算など、お気軽にお聞かせください。</p>
+  <p>どんな小さなご質問でも、お気軽にどうぞ。</p>
   <a class="btn-white" href="https://docs.google.com/forms/d/e/1FAIpQLSfF4Djl8lC0f4xwJ9v8lhH3d00qxcGJgmv-DG0B3osnAXtsAQ/viewform" target="_blank" rel="noopener">撮影を依頼する・相談する</a>
   <p style="color:rgba(255,255,255,0.25); font-size:12px; letter-spacing:0.1em; margin-top:24px; margin-bottom:32px;">
     お問い合わせから24時間以内にご返信します
