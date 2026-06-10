@@ -498,20 +498,81 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     nav { padding: 20px 24px; }
-    section { padding: 80px 24px; }
+    section { padding: 60px 20px; }
+
+    /* HERO */
     .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 60px 24px 48px; }
-    .hero-right { min-height: 320px; }
+    .hero-left {
+      padding: 48px 20px 40px;
+      text-align: center;
+      align-items: center;
+    }
+    .hero-eyebrow { text-align: center; }
+    .hero-title { text-align: center; font-size: 40px; }
+    .hero-subtitle { text-align: center; }
+    .hero-desc { text-align: center; margin: 0 auto 40px; }
+    .btn-primary { align-self: center; }
+    .hero-right { min-height: 300px; }
     .hero-stat { display: none; }
-    .why-grid, .plans-grid { grid-template-columns: 1fr; }
-    .works { padding: 80px 24px; }
+
+    /* WHY */
+    .why-inner { text-align: center; }
+    .why-header { text-align: center; margin-left: auto; margin-right: auto; }
+    .why-grid { grid-template-columns: 1fr; gap: 32px; }
+    .why-card { text-align: center; }
+    .why-card-num { text-align: center; }
+    .divider { margin: 32px auto; }
+
+    /* PLANS */
+    .plans-inner { text-align: center; }
+    .plans-header { text-align: center; margin-left: auto; margin-right: auto; }
+    .plans-grid { grid-template-columns: 1fr; }
+    .plan-card { text-align: center; }
+    .plan-features li { text-align: left; }
+    .btn-plan { text-align: center; }
+
+    /* 単価バナー */
+    .plans-inner > div[style*="display:flex"] {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+
+    /* FLOW */
+    .flow-inner { text-align: center; }
+    .flow-step { grid-template-columns: 1fr; gap: 8px; }
+    .flow-step-num { text-align: center; font-size: 36px; }
+    .flow-step-body { text-align: left; }
+
+    /* FAQ */
+    .faq-inner { text-align: center; }
+    .faq-q { text-align: left; }
+    .faq-a { text-align: left; }
+
+    /* WORKS */
+    .works { padding: 60px 20px; }
+    .works-inner { text-align: center; }
     .works-masonry { grid-template-columns: 1fr 1fr; }
     .works-col-tall:last-child { display: none; }
     .works-subgrid { grid-template-columns: repeat(2, 1fr); }
     .works-wide-row { grid-template-columns: repeat(2, 1fr); }
     .works-wide-row .work-photo:last-child { display: none; }
-    .cta-band { padding: 80px 24px; }
-    footer { flex-direction: column; gap: 16px; text-align: center; }
+
+    /* CTA */
+    .cta-band { padding: 60px 20px; text-align: center; }
+
+    /* FOOTER */
+    footer { flex-direction: column; gap: 16px; text-align: center; padding: 40px 20px; }
+    footer > div { flex-direction: column; align-items: center; gap: 12px; }
+
+    /* オプション表 */
+    .opt-row { grid-template-columns: 1fr; gap: 4px; }
+    .opt-price { text-align: right; }
+
+    /* section-title・eyebrow センター */
+    .section-eyebrow { text-align: center; }
+    .section-title { text-align: center; }
   }
   /* ── OPTION TABLE ── */
   .opt-row {
