@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 100%; overflow-x: hidden; }
 
   :root {
     --off-white: #F7F5F2;
@@ -526,17 +527,23 @@
     /* PLANS */
     .plans-inner { text-align: center; }
     .plans-header { text-align: center; margin-left: auto; margin-right: auto; }
-    .plans-grid { grid-template-columns: 1fr; }
-    .plan-card { text-align: center; }
+    .plans-grid { grid-template-columns: 1fr; gap: 2px; }
+    .plan-card { text-align: center; padding: 32px 20px; }
     .plan-features li { text-align: left; }
     .btn-plan { text-align: center; }
 
-    /* 単価バナー */
-    .plans-inner > div[style*="display:flex"] {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 20px;
+    /* 単価バナー2カラム→1カラム */
+    .price-type-grid { grid-template-columns: 1fr !important; }
+    .price-meta-bar {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 12px !important;
+      padding: 20px !important;
+    }
+
+    /* オプション表のheader */
+    div[style*="grid-template-columns: 1fr auto"][style*="background:#1C1C1C"] {
+      font-size: 10px;
     }
 
     /* FLOW */
