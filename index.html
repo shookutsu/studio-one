@@ -498,56 +498,51 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
+    /* 基本 */
     nav { padding: 20px 24px; }
-    section { padding: 80px 24px; }
+    section { padding: 60px 20px; }
 
-    /* HERO */
+    /* HERO：はみ出し防止 */
     .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 60px 24px 48px; }
-    .hero-right { min-height: 300px; }
+    .hero-left { padding: 48px 20px 40px; }
+    .hero-right { min-height: 280px; }
     .hero-stat { display: none; }
-    .hero-title { font-size: 32px !important; white-space: nowrap; }
-    .cta-band .section-title { font-size: 22px !important; white-space: nowrap; }
-    footer { flex-direction: column; gap: 8px; text-align: center; font-size: 11px; }
-    footer > div { flex-direction: row !important; align-items: center; gap: 8px; flex-wrap: nowrap; }
-    footer > div > span { white-space: nowrap; font-size: 11px; }
+    .hero-title { font-size: 28px !important; white-space: normal; line-height: 1.3; }
+    .hero-subtitle { font-size: 13px !important; }
+    .hero-desc { font-size: 13px !important; }
+
+    /* WHY */
+    .why-grid { grid-template-columns: 1fr; }
 
     /* PLANS */
-    .why-grid, .plans-grid { grid-template-columns: 1fr; }
+    .plans-grid { grid-template-columns: 1fr; }
+    .plan-card { padding: 32px 20px; }
 
-    /* 単価バナー：横並びのままサイズ調整・左右余白均等 */
+    /* 単価バナー：横並び・内側を詰める */
     .price-type-grid {
       grid-template-columns: 1fr 1fr !important;
-      margin: 0 !important;
       width: 100% !important;
+      overflow: hidden !important;
     }
     .price-type-grid > div { padding: 16px 10px !important; }
-    .price-num { font-size: 26px !important; }
+    .price-num { font-size: 24px !important; }
     .price-unit { font-size: 10px !important; }
-    .price-type-grid p { font-size: 11px !important; }
+    .price-type-grid p { font-size: 11px !important; line-height: 1.5 !important; }
 
-    /* 最小受注バー：単価バナーと同幅・左右余白統一 */
+    /* 最小受注バー */
     .price-meta-bar {
-      margin: 0 !important;
       width: 100% !important;
-      padding: 14px 12px !important;
-      gap: 12px !important;
+      padding: 12px 16px !important;
+      gap: 8px !important;
       flex-wrap: wrap !important;
     }
 
-    /* 依頼から納品まで：左右均等 */
-    .flow-step {
-      grid-template-columns: 48px 1fr !important;
-      gap: 16px !important;
-      padding: 32px 0 !important;
-    }
-    .flow-step-num {
-      font-size: 36px !important;
-      text-align: right !important;
-    }
+    /* 依頼の流れ */
+    .flow-step { grid-template-columns: 40px 1fr; gap: 12px; padding: 28px 0; }
+    .flow-step-num { font-size: 32px; text-align: right; }
 
     /* WORKS */
-    .works { padding: 80px 24px; }
+    .works { padding: 60px 20px; }
     .works-masonry { grid-template-columns: 1fr 1fr; }
     .works-col-tall:last-child { display: none; }
     .works-subgrid { grid-template-columns: repeat(2, 1fr); }
@@ -555,11 +550,18 @@
     .works-wide-row .work-photo:last-child { display: none; }
 
     /* CTA */
-    .cta-band { padding: 80px 24px; }
+    .cta-band { padding: 60px 20px; }
+    .cta-band .section-title { font-size: 22px !important; }
 
     /* FOOTER */
-    footer { flex-direction: column; gap: 16px; text-align: center; }
-    footer > div { flex-direction: column; align-items: center; gap: 12px; }
+    footer {
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 11px;
+    }
+    footer .logo { font-size: 16px; }
   }
   /* ── OPTION TABLE ── */
   .opt-row {
@@ -1038,7 +1040,6 @@
 <!-- FOOTER -->
 <footer>
   <span class="logo">studio one</span>
-  <span>商品・人物撮影スタジオ</span>
   <a href="https://www.instagram.com/photo_studio_one_/" target="_blank" rel="noopener" class="footer-ig">
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
       <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
