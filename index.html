@@ -498,11 +498,10 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    /* 基本 */
     nav { padding: 20px 24px; }
     section { padding: 60px 20px; }
 
-    /* HERO：はみ出し防止 */
+    /* HERO */
     .hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-left { padding: 48px 20px 40px; }
     .hero-right { min-height: 280px; }
@@ -518,25 +517,22 @@
     .plans-grid { grid-template-columns: 1fr; }
     .plan-card { padding: 32px 20px; }
 
-    /* 単価バナー：横並び・内側を詰める */
-    .price-type-grid {
-      grid-template-columns: 1fr 1fr !important;
-      width: 100% !important;
-      overflow: hidden !important;
-    }
-    .price-type-grid > div { padding: 16px 10px !important; }
-    .price-box { padding: 16px 10px !important; min-width: 0 !important; }
-    .price-num { font-size: 24px !important; }
-    .price-unit { font-size: 10px !important; }
-    .price-type-grid p { font-size: 11px !important; line-height: 1.5 !important; }
+    /* 単価バナー：縦並び */
+    .price-type-grid { grid-template-columns: 1fr !important; }
+    .price-box { padding: 24px 20px !important; }
+    .price-num { font-size: 36px !important; }
+    .price-unit { font-size: 13px !important; }
+    .price-type-grid p { font-size: 13px !important; }
 
-    /* 最小受注バー */
+    /* 最小受注バー：コンパクト */
     .price-meta-bar {
-      width: 100% !important;
-      padding: 12px 16px !important;
-      gap: 8px !important;
-      flex-wrap: wrap !important;
+      padding: 8px 16px !important;
+      gap: 4px !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      margin-bottom: 32px !important;
     }
+    .price-meta-bar p { font-size: 11px !important; margin: 0 !important; }
 
     /* 依頼の流れ */
     .flow-step { grid-template-columns: 40px 1fr; gap: 12px; padding: 28px 0; }
@@ -817,7 +813,7 @@
         <p style="font-size:12px; color:rgba(255,255,255,0.5); margin-top:10px; line-height:1.8;">小道具・背景紙・スタイリング込み。<br>SNS・広告・LP用ライフスタイルカット。</p>
       </div>
     </div>
-    <div style="background:#fff; border:1px solid var(--light-line); padding:20px 40px; display:flex; gap:48px; flex-wrap:wrap; margin-bottom:56px;">
+    <div class="price-meta-bar" style="background:#fff; border:1px solid var(--light-line); padding:20px 40px; display:flex; gap:48px; flex-wrap:wrap; margin-bottom:56px;">
       <p style="font-size:13px; color:var(--warm-gray);">最小受注：<strong style="color:var(--charcoal);">10カット〜</strong></p>
       <p style="font-size:13px; color:var(--warm-gray);">レタッチ・データ納品：<strong style="color:var(--charcoal);">込み</strong></p>
       <p style="font-size:13px; color:var(--warm-gray);">納品目安：<strong style="color:var(--charcoal);">撮影後7営業日以内</strong></p>
